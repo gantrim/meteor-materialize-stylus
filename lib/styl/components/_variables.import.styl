@@ -1,11 +1,11 @@
 /*** Colors ***/
-$primary-color = color("materialize-red", "lighten-2")
+$primary-color = $materialize-red["lighten-2"]
 $primary-color-light = lighten($primary-color, 15%)
 $primary-color-dark = darken($primary-color, 15%)
-$secondary-color = color("teal", "lighten-1")
-$success-color = color("green", "base")
-$error-color = color("red", "base")
-$link-color = color("light-blue", "darken-1")
+$secondary-color = $teal["lighten-1"]
+$success-color = $green["base"]
+$error-color = $red["base"]
+$link-color = $light-blue["darken-1"]
 /*** Badges ***/
 $badge-bg-color = $secondary-color
 /*** Buttons ***/
@@ -22,7 +22,7 @@ $button-line-height = 36px
 /*** Cards ***/
 $card-padding = 20px
 $card-bg-color = white
-$card-link-color = color("orange", "accent-2")
+$card-link-color = $orange["accent-2"]
 $card-link-color-light = lighten($card-link-color, 20%)
 /*** Collapsible ***/
 $collapsible-height = 3rem
@@ -31,7 +31,7 @@ $collapsible-border-color = #dddddd
 /*** Chips ***/
 $chip-bg-color = #e4e4e4
 /*** Date Picker ***/
-$datepicker-weekday-bg = darken($secondary_color, 7%)
+$datepicker-weekday-bg = darken(#ffffff, 7%)
 $datepicker-date-bg = $secondary_color
 $datepicker-year = rgba(255, 255, 255, 0.4)
 $datepicker-focus = rgba(0, 0, 0, 0.05)
@@ -47,7 +47,7 @@ $roboto-font-path = "../font/roboto/"
 $icons-font-path = "../font/material-design-icons/"
 /*** Forms ***/
 // Text Inputs + Textarea
-$input-border-color = color("grey", "base")
+$input-border-color = $grey["base"]
 $input-bg-color = white
 $input-error-color = $error-color
 $input-success-color = $success-color
@@ -91,9 +91,9 @@ $sidenav-bg-color = white
 $sidenav-padding-right = 15px
 $sidenav-item-height = 64px
 /*** Photo Slider ***/
-$slider-bg-color = color("grey", "base")
-$slider-bg-color-light = color("grey", "lighten-2")
-$slider-indicator-color = color("green", "base")
+$slider-bg-color = $grey["base"]
+$slider-bg-color-light = $grey["lighten-2"]
+$slider-indicator-color = $green["base"]
 /*** Spinners | Loaders ***/
 $spinner-default-color = $secondary-color
 /*** Tabs ***/
