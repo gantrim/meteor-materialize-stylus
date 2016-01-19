@@ -58,12 +58,12 @@ small
   font-weight: 200
 .flow-text
   font-weight: 300
-  $i = 0
+
   //Stylus does not support while loops
-  //@while $i <= $intervals
-  //  @media only screen and (min-width: 360 + $i * $interval-size)
-  //    font-size: 1.2rem * (1 + 0.02 * $i)
-  //  $i: $i + 1
-  // Handle below 360px screen
+  for $i in 0..$intervals
+    @media only screen and (min-width: 360 + $i * $interval-size)
+      font-size: 1.2rem * (1 + 0.02 * $i)
+
+   //Handle below 360px screen
   @media only screen and (max-width: 360px)
     font-size: 1.2rem

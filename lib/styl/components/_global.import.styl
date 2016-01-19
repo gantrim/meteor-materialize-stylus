@@ -54,7 +54,7 @@ ul
 .divider
   height: 1px
   overflow: hidden
-  background-color: color("grey", "lighten-2")
+  background-color: $grey["lighten-2"]
 //  Blockquote
 blockquote
   margin: 20px 0
@@ -106,7 +106,7 @@ video.responsive-video
   li.pages ul li
     display: inline-block
     float: none
-@media only screen and (max-width: (interpolation nil $medium-screen nil))
+@media $medium-and-down
   .pagination
     width: 100%
     li.prev,
@@ -180,38 +180,38 @@ ul.staggered-list li
   Media Query Classes
 **********************/
 .hide-on-small-only, .hide-on-small-and-down
-  @media only screen and (max-width: (interpolation nil $small-screen nil))
+  @media $small-and-down
     display: none !important
 .hide-on-med-and-down
-  @media only screen and (max-width: (interpolation nil $medium-screen nil))
+  @media $medium-and-down
     display: none !important
 .hide-on-med-and-up
-  @media only screen and (min-width: (interpolation nil $small-screen-up nil))
+  @media $medium-and-up
     display: none !important
 .hide-on-med-only
-  @media only screen and (min-width: $small-screen) and (max-width: $medium-screen)
+  @media $medium-only
     display: none !important
 .hide-on-large-only
-  @media only screen and (min-width: (interpolation nil $medium-screen-up nil))
+  @media $large-and-up
     display: none !important
 .show-on-large
-  @media only screen and (min-width: (interpolation nil $medium-screen-up nil))
+  @media $large-and-up
     display: block !important
 .show-on-medium
-  @media only screen and (min-width: $small-screen) and (max-width: $medium-screen)
+  @media $medium-only
     display: block !important
 .show-on-small
-  @media only screen and (max-width: (interpolation nil $small-screen nil))
+  @media $small-and-down
     display: block !important
 .show-on-medium-and-up
-  @media only screen and (min-width: (interpolation nil $small-screen-up nil))
+  @media $medium-and-up
     display: block !important
 .show-on-medium-and-down
-  @media only screen and (max-width: (interpolation nil $medium-screen nil))
+  @media $medium-and-down
     display: block !important
 // Center text on mobile
 .center-on-small-only
-  @media only screen and (max-width: (interpolation nil $small-screen nil))
+  @media $small-and-down
     text-align: center
 // Footer
 footer.page-footer
@@ -224,7 +224,6 @@ footer.page-footer
     line-height: 50px
     color: rgba(255, 255, 255, 0.8)
     background-color: rgba(51, 51, 51, 0.08)
-    @extend .light
 // Tables
 table, th, td
   border: none
@@ -255,7 +254,7 @@ td, th
   vertical-align: middle
   border-radius: 2px
 // Responsive Table
-@media only screen and (max-width: (interpolation nil $medium-screen nil))
+@media $medium-and-down
   table.responsive-table
     width: 100%
     border-collapse: collapse
@@ -275,7 +274,7 @@ td, th
         display: block
         padding: 0 10px 0 0
         th::before
-        content: "\00a0"
+          content: "\00a0"
     tbody
       display: block
       width: auto
@@ -387,7 +386,7 @@ span.badge
   text-align: center
   font-size: 1rem
   line-height: inherit
-  color: color("grey", "darken-1")
+  color: $grey["darken-1"]
   position: absolute
   right: 15px
   box-sizing: border-box
@@ -456,26 +455,26 @@ nav ul a span.badge
       // Custom bezier
       animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite
       animation-delay: 1.15s
-@keyframes
-  0$
-left: -35%
-right: 100%
-60$
-left: 100%
-right: -90%
-100$
-left: 100%
-right: -90%
-@keyframes
-  0$
-left: -200%
-right: 100%
-60$
-left: 107%
-right: -8%
-100$
-left: 107%
-right: -8%
+@keyframes indeterminate
+  0%
+    left: -35%
+    right: 100%
+  60%
+    left: 100%
+    right: -90%
+  100%
+    left: 100%
+    right: -90%
+@keyframes indeterminate-short
+  0%
+    left: -200%
+    right: 100%
+  60%
+    left: 107%
+    right: -8%
+  100%
+    left: 107%
+    right: -8%
 /*******************
   Utility Classes
 *******************/
