@@ -3,8 +3,8 @@
 Package.describe({
     name: 'gantrim:materialize-stylus',  // http://atmospherejs.com/materialize/materialize
     summary: 'Materialize (official): A modern responsive front-end framework based on Material Design',
-    version: '0.0.1',
-    git: 'https://github.com/poetic/meteor-materialize-scss'
+    version: '1.0.0',
+    git: 'https://github.com/gantrim/meteor-materialize-stylus'
 });
 
 Package.onUse(function (api) {
@@ -74,20 +74,21 @@ Package.onUse(function (api) {
         'lib/styl/components/_tooltip.import.styl',
         'lib/styl/components/_typography.import.styl',
         'lib/styl/components/_variables.import.styl',
-        'lib/styl/components/_waves.import.styl',
-        'lib/styl/materialize.styl',
+        'lib/styl/components/_waves.import.styl'
     ];
 
     api.addFiles(stylFiles, 'client');
+    api.addFiles('lib/styl/materialize.styl', 'client', {isImport: true});
 
     api.export('Materialize', 'client');
 });
 
 
-function addAssets(api, assets){
-    if(api.addAssets){
+function addAssets(api, assets) {
+    if (api.addAssets) {
         api.addAssets(assets, 'client');
-    } else {
+    }
+    else {
         api.addFiles(assets, 'client', {isAsset: true});
     }
 }
