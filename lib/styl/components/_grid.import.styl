@@ -48,7 +48,7 @@
 
     for $i in 1..$num-cols
       $perc = 100 / ($num-cols / $i) + "%"
-      &.s$i
+      &.s{$i}
         width: $perc
         margin-left: auto
         left: auto
@@ -56,16 +56,16 @@
 
     for $i in 1..$num-cols
       $perc= 100 / ($num-cols / $i) + "%"
-      &.offset-s$i
+      &.offset-s{$i}
         margin-left: $perc
-      &.pull-s$i
+      &.pull-s{$i}
         right: $perc
-      &.push-s$i
+      &.push-s{$i}
         left: $perc
     @media $medium-and-up
       for $i in 1..$num-cols
         $perc= 100 / ($num-cols / $i) + "%"
-        &.m$i
+        &.m{$i}
           width: $perc
           margin-left: auto
           left: auto
@@ -73,17 +73,17 @@
 
       for $i in 1..$num-cols
         $perc= 100 / ($num-cols / $i) + "%"
-        &.offset-m$i
+        &.offset-m{$i}
           margin-left: $perc
-        &.pull-m$i
+        &.pull-m{$i}
           right: $perc
-        &.push-m$i
+        &.push-m{$i}
           left: $perc
 
     @media $large-and-up
       for $i in 1..$num-cols
         $perc= 100 / ($num-cols / $i) + "%"
-        &.l$i
+        &.l{$i}
           width: $perc
           margin-left: auto
           left: auto
@@ -92,9 +92,9 @@
 
       for $i in 1..$num-cols
         $perc= 100 / ($num-cols / $i) + "%"
-        &.offset-l$i
+        &.offset-l{$i}
           margin-left: $perc
-        &.pull-l$i
+        &.pull-l{$i}
           right: $perc
-        &.push-l$i
+        &.push-l{$i}
           left: $perc
