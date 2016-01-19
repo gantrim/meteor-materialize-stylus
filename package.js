@@ -78,7 +78,7 @@ Package.onUse(function (api) {
     ];
 
     api.addFiles(stylFiles, 'client');
-    api.addFiles('lib/styl/materialize.styl', 'client', {isImport: true});
+    api.addFiles('lib/styl/materialize-components.styl', 'client', {isImport: true});
 
     api.export('Materialize', 'client');
 });
