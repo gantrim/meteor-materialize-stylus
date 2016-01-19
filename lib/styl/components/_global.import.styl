@@ -106,7 +106,7 @@ video.responsive-video
   li.pages ul li
     display: inline-block
     float: none
-@media only screen and (max-width: (interpolation nil $medium-screen nil))
+@media $medium-and-down
   .pagination
     width: 100%
     li.prev,
@@ -180,38 +180,38 @@ ul.staggered-list li
   Media Query Classes
 **********************/
 .hide-on-small-only, .hide-on-small-and-down
-  @media only screen and (max-width: (interpolation nil $small-screen nil))
+  @media $small-and-down
     display: none !important
 .hide-on-med-and-down
-  @media only screen and (max-width: (interpolation nil $medium-screen nil))
+  @media $medium-and-down
     display: none !important
 .hide-on-med-and-up
-  @media only screen and (min-width: (interpolation nil $small-screen-up nil))
+  @media $medium-and-up
     display: none !important
 .hide-on-med-only
-  @media only screen and (min-width: $small-screen) and (max-width: $medium-screen)
+  @media $medium-only
     display: none !important
 .hide-on-large-only
-  @media only screen and (min-width: (interpolation nil $medium-screen-up nil))
+  @media $large-and-up
     display: none !important
 .show-on-large
-  @media only screen and (min-width: (interpolation nil $medium-screen-up nil))
+  @media $large-and-up
     display: block !important
 .show-on-medium
-  @media only screen and (min-width: $small-screen) and (max-width: $medium-screen)
+  @media $medium-only
     display: block !important
 .show-on-small
-  @media only screen and (max-width: (interpolation nil $small-screen nil))
+  @media $small-and-down
     display: block !important
 .show-on-medium-and-up
-  @media only screen and (min-width: (interpolation nil $small-screen-up nil))
+  @media $medium-and-up
     display: block !important
 .show-on-medium-and-down
-  @media only screen and (max-width: (interpolation nil $medium-screen nil))
+  @media $medium-and-down
     display: block !important
 // Center text on mobile
 .center-on-small-only
-  @media only screen and (max-width: (interpolation nil $small-screen nil))
+  @media $small-and-down
     text-align: center
 // Footer
 footer.page-footer
@@ -254,7 +254,7 @@ td, th
   vertical-align: middle
   border-radius: 2px
 // Responsive Table
-@media only screen and (max-width: (interpolation nil $medium-screen nil))
+@media $medium-and-down
   table.responsive-table
     width: 100%
     border-collapse: collapse

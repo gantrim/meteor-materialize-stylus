@@ -11,10 +11,10 @@
   margin: 0 auto
   max-width: 1280px
   width: 90%
-@media only screen and (min-width: (interpolation nil $small-screen-up nil))
+@media $medium-and-up
   .container
     width: 85%
-@media only screen and (min-width: (interpolation nil $medium-screen-up nil))
+@media $large-and-up
   .container
     width: 70%
 .container .row
@@ -41,7 +41,7 @@
   .col
     float: left
     box-sizing: border-box
-    padding: 0 $gutter-width / 2
+    padding: 0 ($gutter-width / 2)
     &[class*="push-"],
     &[class*="pull-"]
       position: relative
@@ -62,7 +62,7 @@
         right: $perc
       &.push-s$i
         left: $perc
-    @media only screen and (min-width: (interpolation nil $small-screen-up nil))
+    @media $medium-and-up
       for $i in 1..$num-cols
         $perc= 100 / ($num-cols / $i) + "%"
         &.m$i
@@ -80,7 +80,7 @@
         &.push-m$i
           left: $perc
 
-    @media only screen and (min-width: (interpolation nil $medium-screen-up nil))
+    @media $large-and-up
       for $i in 1..$num-cols
         $perc= 100 / ($num-cols / $i) + "%"
         &.l$i

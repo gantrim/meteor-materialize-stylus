@@ -17,7 +17,7 @@ nav
   .nav-wrapper
     position: relative
     height: 100%
-  @media only screen and (min-width: (interpolation nil $medium-screen-up nil))
+  @media $large-and-up
     a.button-collapse
       display: none
   // Collapse button
@@ -41,7 +41,7 @@ nav
     &.center
       left: 50%
       transform: translateX(-50%)
-    @media only screen and (max-width: (interpolation nil $medium-screen nil))
+    @media $medium-and-down
       left: 50%
       transform: translateX(-50%)
       &.left, &.right
@@ -108,7 +108,7 @@ nav
   z-index: 998
   nav
     position: fixed
-@media only screen and (min-width: (interpolation nil $small-screen-up nil))
+@media $medium-and-up
   nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i
     height: $navbar-height
     line-height: $navbar-height

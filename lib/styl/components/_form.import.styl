@@ -124,11 +124,11 @@ textarea.materialize-textarea
     padding-top: .8rem
   .prefix ~ label
     margin-left: 3rem
-  @media only screen and (max-width: (interpolation nil $medium-screen nil))
+  @media $medium-and-down
     .prefix ~ input
       width: 86%
       width: calc(100% - 3rem)
-  @media only screen and (max-width: (interpolation nil $small-screen nil))
+  @media $small-and-down
     .prefix ~ input
       width: 80%
       width: calc(100% - 3rem)
