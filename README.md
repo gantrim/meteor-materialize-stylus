@@ -23,5 +23,7 @@ Bug fixes and pull requests welcome. At the very least, if you notice an issue p
 
 # CREDIT/THANKS
 [Materialize](https://github.com/Dogfalo/materialize)
+
 [meteor-materialize-scss](https://github.com/poetic/meteor-materialize-scss)
+
 [Sass2Stylus](https://github.com/mojotech/sass2stylus)
