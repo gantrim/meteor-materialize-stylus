@@ -3,14 +3,14 @@
 Package.describe({
     name: 'gantrim:materialize-stylus',  // http://atmospherejs.com/materialize/materialize
     summary: 'Materialize (official): A modern responsive front-end framework based on Material Design',
-    version: '1.1.8',
+    version: '1.1.9',
     git: 'https://github.com/gantrim/meteor-materialize-stylus'
 });
 
 Package.onUse(function (api) {
-    api.versionsFrom('METEOR@1.6.0.1');
-
-    api.use('stylus@2.513.13');
+    api.versionsFrom('METEOR@1.6.1.1');
+    
+    api.use('coagmano:stylus');
     api.use('jquery', 'client');
     api.imply('jquery', 'client');
 
