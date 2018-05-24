@@ -1,3 +1,5 @@
+# NOTE: Changed stylus package
+As of v1.2.0 this package has switched to using the [coagmano:stylus package](https://github.com/coagmano/meteor-stylus/) instead of the bundled [meteor stylus package](https://atmospherejs.com/meteor/stylus). This is because the meteor stylus package is being deprecated after 2.513.14. This package may continue to work with the bundled meteor stylus package, but I cannot gurantee anything. If you want to keep using the bundled meteor stylus package, please pin the package at v1.1.8 using 'meteor add gantrim:materialize-stylus@=1.1.8' or by doing `api.use('gantrim:materialize-stylus@1.1.8');` inside your package.js
 # ABOUT
 Materialize CSS Packaged for meteor and using stylus. This packages allows you to use all variables available in the SCSS materialize package with the clean syntax of stylus.
 # INSTALL
