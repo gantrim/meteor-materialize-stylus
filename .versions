@@ -7,7 +7,7 @@ ecmascript@0.10.8
 ecmascript-runtime@0.5.0
 ecmascript-runtime-client@0.6.2
 ecmascript-runtime-server@0.5.0
-gantrim:materialize-stylus@1.2.0
+gantrim:materialize-stylus@1.2.1
 http@1.4.1
 jquery@1.11.11
 meteor@1.8.6
