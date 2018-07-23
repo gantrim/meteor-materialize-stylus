@@ -78,44 +78,43 @@ grid-classes($size, $i, $perc) {
     }
 
     for $i in (1..$num-cols)
-      $perc = percentage(100 / ($num-cols / $i));
+      $perc = unit(100 / ($num-cols / $i),'%');
       &.s{$i}
         width: $perc;
         reset-offset();
 
     for $i in (1..$num-cols)
-      $perc = percentage(100 / ($num-cols / $i));
+      $perc = unit(100 / ($num-cols / $i),'%');
       grid-classes("s", $i, $perc);
 
     @media $medium-and-up
       for $i in (1..$num-cols)
-        $perc = percentage(100 / ($num-cols / $i));
+        $perc = unit(100 / ($num-cols / $i),'%');
         &.m{$i}
           width: $perc;
           reset-offset();
       for $i in (1..$num-cols)
-        $perc = percentage(100 / ($num-cols / $i));
+        $perc = unit(100 / ($num-cols / $i),'%');
         grid-classes("m", $i, $perc);
 
     @media $large-and-up
       for $i in (1..$num-cols)
-        $perc = percentage(100 / ($num-cols / $i));
+        $perc = unit(100 / ($num-cols / $i),'%');
         &.l{$i}
           width: $perc;
           reset-offset();
 
       for $i in (1..$num-cols)
-        $perc = percentage(100 / ($num-cols / $i));
+        $perc = unit(100 / ($num-cols / $i),'%');
         grid-classes("l", $i, $perc);
 
     @media $extra-large-and-up
       for $i in (1..$num-cols)
-        $perc = percentage(100 / ($num-cols / $i));
-
+        $perc = unit(100 / ($num-cols / $i),'%');
         &.l{$i}
           width: $perc;
           reset-offset();
 
       for $i in (1..$num-cols)
-        $perc = percentage(100 / ($num-cols / $i));
+        $perc = unit(100 / ($num-cols / $i),'%');
         grid-classes("l", $i, $perc);

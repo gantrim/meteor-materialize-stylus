@@ -20,27 +20,27 @@ select {
 .select-wrapper {
   &.valid .helper-text[data-success],
   &.invalid ~ .helper-text[data-error] {
-    @extend %hidden-text;
+    @extend $hidden-text;
   }
 
   &.valid {
     & > input.select-dropdown {
-      @extend %valid-input-style;
+      @extend $valid-input-style;
     }
 
     & ~ .helper-text:after {
-      @extend %custom-success-message;
+      @extend $custom-success-message;
     }
   }
 
   &.invalid {
     & > input.select-dropdown,
     & > input.select-dropdown:focus {
-      @extend %invalid-input-style;
+      @extend $invalid-input-style;
     }
 
     & ~ .helper-text:after {
-      @extend %custom-error-message;
+      @extend $custom-error-message;
     }
   }
 
@@ -51,7 +51,7 @@ select {
   }
 
   & + label:after {
-    @extend %input-after-style;
+    @extend $input-after-style;
   }
 
   position: relative;

@@ -3,8 +3,43 @@
 
 /* Style Placeholders */
 
-::placeholder {
-  color: $placeholder-text-color;
+::placeholder
+  color: $placeholder-text-color
+
+$valid-input-style {
+  border-bottom: 1px solid $input-success-color;
+  box-shadow: 0 1px 0 0 $input-success-color;
+}
+
+$invalid-input-style {
+  border-bottom: $input-invalid-border;
+  box-shadow: 0 1px 0 0 $input-error-color;
+}
+
+$hidden-text {
+  color: transparent;
+  user-select: none;
+  pointer-events: none;
+}
+
+$custom-success-message {
+  content: attr(data-success);
+  color: $input-success-color;
+}
+
+$custom-error-message {
+  content: attr(data-error);
+  color: $input-error-color;
+}
+
+$input-after-style {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transition: .2s opacity ease-out, .2s color ease-out;
 }
 
 /* Text inputs */
@@ -46,8 +81,8 @@ textarea.materialize-textarea {
   }
 
   // Disabled label style
-  &:disabled+label,
-  &[readonly="readonly"]+label {
+  &:disabled + label,
+  &[readonly="readonly"] + label {
     color: $input-disabled-color;
   }
 
@@ -58,7 +93,7 @@ textarea.materialize-textarea {
   }
 
   // Focused label style
-  &:focus:not([readonly])+label {
+  &:focus:not([readonly]) + label {
     color: $input-focus-color;
   }
 
@@ -67,19 +102,19 @@ textarea.materialize-textarea {
   &:focus.valid ~ .helper-text[data-success],
   &.invalid ~ .helper-text[data-error],
   &:focus.invalid ~ .helper-text[data-error] {
-    @extend %hidden-text;
+    @extend $hidden-text;
   }
 
   // Valid Input Style
   &.valid,
   &:focus.valid {
-    @extend %valid-input-style;
+    @extend $valid-input-style;
   }
 
   // Custom Success Message
   &.valid ~ .helper-text:after,
   &:focus.valid ~ .helper-text:after {
-    @extend %custom-success-message;
+    @extend $custom-success-message;
   }
   &:focus.valid ~ label {
     color: $input-success-color;
@@ -88,13 +123,13 @@ textarea.materialize-textarea {
   // Invalid Input Style
   &.invalid,
   &:focus.invalid {
-    @extend %invalid-input-style;
+    @extend $invalid-input-style;
   }
 
   // Custom Error message
   &.invalid ~ .helper-text:after,
   &:focus.invalid ~ .helper-text:after {
-    @extend %custom-error-message;
+    @extend $custom-error-message;
   }
   &:focus.invalid ~ label {
     color: $input-error-color;
@@ -107,43 +142,9 @@ textarea.materialize-textarea {
 
   // Form Message Shared Styles
   & + label:after {
-    @extend %input-after-style;
+    @extend $input-after-style;
   }
 }
-
-
-/* Validation Sass Placeholders */
-%valid-input-style {
-  border-bottom: 1px solid $input-success-color;
-  box-shadow: 0 1px 0 0 $input-success-color;
-}
-%invalid-input-style {
-  border-bottom: $input-invalid-border;
-  box-shadow: 0 1px 0 0 $input-error-color;
-}
-%hidden-text {
-  color: transparent;
-  user-select: none;
-  pointer-events: none;
-}
-%custom-success-message {
-  content: attr(data-success);
-  color: $input-success-color;
-}
-%custom-error-message {
-  content: attr(data-error);
-  color: $input-error-color;
-}
-%input-after-style {
-  display: block;
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  opacity: 0;
-  transition: .2s opacity ease-out, .2s color ease-out;
-}
-
 
 // Styling for input field wrapper
 .input-field {
@@ -213,7 +214,7 @@ textarea.materialize-textarea {
     min-height: 18px;
     display: block;
     font-size: 12px;
-    color: rgba(0,0,0,.54);
+    color: rgba(0, 0, 0, .54);
   }
 
   // Prefix Icons
@@ -224,7 +225,9 @@ textarea.materialize-textarea {
     transition: color .2s;
     top: ($input-height - $input-icon-size) / 2;
 
-    &.active { color: $input-focus-color; }
+    &.active {
+      color: $input-focus-color;
+    }
   }
 
   .prefix ~ input,
@@ -238,7 +241,9 @@ textarea.materialize-textarea {
     width: calc(100% - 3rem);
   }
 
-  .prefix ~ label { margin-left: 3rem; }
+  .prefix ~ label {
+    margin-left: 3rem;
+  }
 
   @media $medium-and-down {
     .prefix ~ input {
@@ -254,7 +259,6 @@ textarea.materialize-textarea {
     }
   }
 }
-
 
 /* Search Field */
 
@@ -301,7 +305,6 @@ textarea.materialize-textarea {
   }
 }
 
-
 /* Textarea */
 
 // Default textarea
@@ -334,11 +337,12 @@ textarea {
   z-index: -1;
 }
 
-
 /* Autocomplete */
 .autocomplete-content {
   li {
-    .highlight { color: #444; }
+    .highlight {
+      color: #444;
+    }
 
     img {
       height: $dropdown-item-height - 10;
