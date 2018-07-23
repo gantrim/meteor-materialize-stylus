@@ -352,15 +352,12 @@ $colors = {
   "blue-grey": $blue-grey,
   "grey": $grey,
   "shades": $shades
-} !default;
+};
 
-
-getColor($color, $type) {
-  if map-has-key($colors, $color) {
+getColor($color, $type)
+  if map-has-key($colors, $color)
     $curr_color = $colors[$color];
-    if $type in $curr_color {
-      @return $curr_color[$type];
-    }
-  }
-  @return null;
-}
+    if $type in $curr_color
+       $curr_color[$type]
+  else
+     null
