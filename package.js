@@ -1,9 +1,9 @@
 // package metadata file for Meteor.js
 
 Package.describe({
-    name: 'gantrim:materialize-stylus',  // http://atmospherejs.com/materialize/materialize
-    summary: 'Materialize (official): A modern responsive front-end framework based on Material Design',
-    version: '2.0.1',
+    name: 'gantrim:materialize-stylus',
+    summary: 'Materialize v1.0.0-rc.2 converted to stylus and packaged for meteor',
+    version: '2.0.0',
     git: 'https://github.com/gantrim/meteor-materialize-stylus'
 });
 
@@ -62,10 +62,8 @@ Package.onUse(function (api) {
         'lib/styl/materialize.styl'
     ];
 
-    // api.addFiles(stylFiles, 'client');
     api.addFiles(stylFiles, 'client', {isImport: true});
 
-    // api.export('Materialize', 'client');
     api.export('M', 'client');
 });
 
