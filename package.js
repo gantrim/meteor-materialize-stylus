@@ -8,7 +8,7 @@ Package.describe({
 });
 
 Package.onUse(function (api) {
-    api.versionsFrom('METEOR@1.6.1.1');
+    api.versionsFrom('METEOR@1.8.1');
 
     api.use('coagmano:stylus@1.0.3');
     api.use('jquery', 'client');
