@@ -3,15 +3,15 @@
 Package.describe({
     name: 'gantrim:materialize-stylus',
     summary: 'Materialize v1.0.0-rc.2 converted to stylus and packaged for meteor',
-    version: '2.0.0',
+    version: '2.0.1',
     git: 'https://github.com/gantrim/meteor-materialize-stylus'
 });
 
 Package.onUse(function (api) {
-    api.versionsFrom('METEOR@1.6.1.1');
+    api.versionsFrom('METEOR@1.8.1');
 
     api.use('coagmano:stylus@1.0.3');
-    api.use('jquery', 'client');
+    api.use('jquery@1.11.11', 'client');
     api.imply('jquery', 'client');
 
 
